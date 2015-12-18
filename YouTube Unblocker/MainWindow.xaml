@@ -1,0 +1,48 @@
+﻿<Controls:MetroWindow
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:YouTube_Unblocker"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:awe="http://schemas.awesomium.com/winfx"
+    x:Class="YouTube_Unblocker.MainWindow"
+    mc:Ignorable="d"
+    ShowIconOnTitleBar="True"
+    Title="Youtube Unblocker"
+    Height="720" Width="1280"
+    Icon="yt.ublock.ico"
+    WindowTransitionsEnabled="False"
+    BorderThickness="1"
+    BorderBrush="#00000000"
+    Background="White">
+    <!-- Titlebar Commands -->
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Click="videoButton_Click" x:Name="videoButton">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20" Height="20"
+                               Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Uniform"
+                                         Visual="{StaticResource appbar_monitor_play}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock x:Name="videoButtonText" Margin="4 0 0 0"
+                               VerticalAlignment="Center"
+                               Text="Change Video" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <!-- Flyouts -->
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout x:Name="videoFlyout" Header="Change Video" Position="Right" Width="300" Theme="Accent" />
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+    <!-- Window Content -->
+    <Grid>
+        <awe:WebControl x:Name="youtubeViewer" Source="https://www.youtube-nocookie.com/embed/KK9bwTlAvgo?rel=0&amp;iv_load_policy=3&amp;modestbranding=1" />
+    </Grid>
+</Controls:MetroWindow>
