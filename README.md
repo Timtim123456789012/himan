@@ -1,7 +1,9 @@
 # YouTube-Unblocker
 Discovered my school doesn't block youtube-nocookie. Decided to take advantage of that and pack it into an application.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/9p71pq8stwrl4re9?svg=true)](https://ci.appveyor.com/project/Syrexide/youtube-unblocker) ![Language](https://img.shields.io/badge/language-C%23-178600.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Build status](https://ci.appveyor.com/api/projects/status/9p71pq8stwrl4re9?svg=true)](https://ci.appveyor.com/project/Syrexide/youtube-unblocker) <--- because awesomium isnt on nuget
+
+![Language](https://img.shields.io/badge/language-C%23-178600.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 # Notes
  * Verified to work on **Windows 7** and up.
